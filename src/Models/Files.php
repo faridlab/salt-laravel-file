@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use DB;
 use Illuminate\Support\Facades\Schema;
 
+use SaltLaravel\Models\Resources;
 use SaltLaravel\Traits\ObservableModel;
 use SaltLaravel\Traits\Uuids;
 use SaltFile\Traits\Fileable;
