@@ -3,7 +3,7 @@
 namespace SaltFile\Traits;
 
 use Illuminate\Support\Facades\Auth;
-use App\Models\Files;
+use SaltFile\Models\Files;
 
 trait Fileable
 {
