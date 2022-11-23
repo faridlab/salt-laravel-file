@@ -21,6 +21,7 @@ use SaltLaravel\Controllers\Traits\ResourceImportable;
 use SaltLaravel\Controllers\Traits\ResourceExportable;
 use SaltLaravel\Controllers\Traits\ResourceReportable;
 
+use SaltLaravel\Services\Filestore;
 /**
  * @OA\Info(
  *      title="Countries Endpoint",
@@ -79,21 +80,12 @@ class FilesResourcesController extends Controller
      */
     public function upCreate(Request $request)
     {
-        // TODO: make this permission work in the future
-        // try {
-        //     $this->checkPermissions('updatePhoto', 'update');
-        // } catch (\Exception $e) {
-        //     $this->responder->set('message', 'You do not have authorization.');
-        //     $this->responder->setStatus(401, 'Unauthorized');
-        //     return $this->responder->response();
-        // }
-
+        $this->checkModelAuthorization('upCreate', 'create');
         try {
-
             $validator = Validator::make($request->all(), [
                                     'file' => 'required|file',
                                     'foreign_table' => 'required|string',
-                                    'foreign_id' => 'required|integer',
+                                    'foreign_id' => 'required|string',
                                     'directory' => 'required|string'
                                 ]);
 
