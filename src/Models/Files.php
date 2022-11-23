@@ -83,7 +83,8 @@ class Files extends Resources {
         'delete',
         'import',
         'export',
-        'report'
+        'report',
+        'upCreate'
     );
 
     protected $forms = array();
