@@ -67,7 +67,7 @@ class Files extends Resources {
         'type' => 'required|string|in:compress,document,image,video,audio,other',
         'directory' => 'nullable|string',
         'foreign_table' => 'nullable|string',
-        'foreign_id' => 'nullable|integer',
+        'foreign_id' => 'nullable|string',
     );
 
     protected $auths = array (
