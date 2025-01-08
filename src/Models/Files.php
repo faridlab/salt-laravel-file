@@ -30,6 +30,7 @@ class Files extends Resources {
         'type',
         'foreign_table',
         'foreign_id',
+        'order'
     ];
 
     protected $filters = [
@@ -53,6 +54,7 @@ class Files extends Resources {
         "ext",
         "size",
         "type",
+        "order",
     ];
 
     protected $rules = array(
@@ -63,6 +65,7 @@ class Files extends Resources {
         'title' => 'nullable|string|max:255',
         'description' => 'nullable|string|max:255',
         'size' => 'nullable|integer',
+        'order' => 'nullable|integer',
         'ext' => 'nullable|string|max:20',
         'type' => 'required|string|in:compress,document,image,video,audio,other',
         'directory' => 'nullable|string',
@@ -102,5 +105,6 @@ class Files extends Resources {
         'type',
         'foreign_table',
         'foreign_id',
+        'order'
     );
 }
